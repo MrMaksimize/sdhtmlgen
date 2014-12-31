@@ -1,0 +1,20 @@
+include lib/forms.jade
+
+extends layout
+
+block content
+  h1= "Entry Form"
+  form#pressReleaseForm(class="form-horizontal" action='generatehtml' method="GET")
+    .form-group
+      label(class='col-sm-2 control-label', for='headline') Headline
+      .col-sm-6
+        input.form-control(type='text', name='headline', id='headline', autofocus=true)
+    .form-group
+      label(class='col-sm-2 control-label', for='subhead') Subhead
+      .col-sm-6
+        input.form-control(type='text', name='subhead', id='subhead')
+    .form-group
+      .col-sm-offset-2.col-sm-8
+        button.btn.btn-default(type='submit')
+          i.fa.fa-mail-forward
+          | Submit
