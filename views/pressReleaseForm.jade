@@ -14,6 +14,26 @@ block content
       .col-sm-6
         input.form-control(type='text', name='subhead', id='subhead')
     .form-group
+      label(class='col-sm-2 control-label', for='subhead') Date
+      .col-sm-6
+        input.form-control(type='date', name='date', id='date')
+    .form-group
+      label(class='col-sm-2 control-label', for='name') Name
+      .col-sm-6
+        input.form-control(type='text', name='name', id='name')
+    .form-group
+      label(class='col-sm-2 control-label', for='email') Email
+      .col-sm-6
+        input.form-control(type='email', name='email', id='email')
+    .form-group
+      label(class='col-sm-2 control-label', for='Phone') Phone
+      .col-sm-6
+        input.form-control(type='phone', name='phone', id='phone')
+    .form-group
+      label(class='col-sm-2 control-label', for='Phone') Body
+      .col-sm-6
+        textarea.form-control(rows='10' name='body', id='body')
+    .form-group
       .col-sm-offset-2.col-sm-8
         button.btn.btn-default(type='submit')
           i.fa.fa-mail-forward
