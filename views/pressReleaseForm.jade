@@ -4,7 +4,7 @@ extends layout
 
 block content
   h1= "Entry Form"
-  form#pressReleaseForm(class="form-horizontal" action='generatehtml' method="GET")
+  form#pressReleaseForm(class="form-horizontal" action='generatehtml' method="POST")
     .form-group
       label(class='col-sm-2 control-label', for='headline') Headline
       .col-sm-6
@@ -30,11 +30,17 @@ block content
       .col-sm-6
         input.form-control(type='phone', name='phone', id='phone')
     .form-group
+      .toolbar
+        a(data-wysihtml5-command="bold") bold
       label(class='col-sm-2 control-label', for='Phone') Body
       .col-sm-6
-        textarea.form-control(rows='10' name='body', id='body')
+        textarea.form-control.editor(rows='10' name='body', id='body')
     .form-group
       .col-sm-offset-2.col-sm-8
         button.btn.btn-default(type='submit')
           i.fa.fa-mail-forward
           | Submit
+  script(src='/components/wysihtml/dist/wysihtml5x-toolbar.min.js')
+  script(src='/components/wysihtml/parser_rules/advanced_and_extended.js')
+  script(src='/js/editor.js')
+

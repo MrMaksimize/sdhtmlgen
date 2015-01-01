@@ -12,9 +12,9 @@ router.get('/form', function(req, res) {
   });
 });
 
-router.get('/generatehtml', function(req, res) {
-  //return res.json(req.query);
-  return res.render('pressReleaseRender', req.query);
+router.post('/generatehtml', function(req, res) {
+  //return res.json(req.body);
+  return res.render('pressReleaseRender', req.body);
 });
 
 module.exports = router;
