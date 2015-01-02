@@ -13,7 +13,6 @@ router.get('/form', function(req, res) {
 });
 
 router.post('/generatehtml', function(req, res) {
-  //return res.json(req.body);
   return res.render('pressReleaseRender', req.body);
 });
 
